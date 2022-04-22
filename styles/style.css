@@ -18,20 +18,43 @@ h1{
 }
 
 header{
+   
     width: 100%;
     background-color: rgb(71, 10, 240);
     color: white;
     display: flex;
- justify-content: center;
+    flex-direction: column;
+ align-items: center;
 
  margin-bottom: 33px;
 }
 
+
+.nav_item a{
+text-decoration: none;
+color:white;
+margin-right: 36px;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+
+nav{
+   
+    margin-top: 52px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 /* =======================Banner Style Start ======================================================*/
 
 
 .banner{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 85px;
   
 }
@@ -135,7 +158,7 @@ margin-top: 0;
 margin-bottom: 63px;
        
     }
-    .lower_banner_text a{
+    .lower_banner_text a, .button{
         text-decoration: none;
         color: white;
         font-weight: 500;
@@ -181,3 +204,48 @@ margin-bottom: 63px;
     }
 
     
+    /* ===============================Responsive================ */
+    @media only screen and (max-width:500px){
+        .container{
+            width: 100%;
+            padding: 0 30px;
+        }
+
+        .nav{
+            justify-content: right;
+        }
+        .nav_item{
+            display: none;
+        }
+        .login{
+            display: block;
+            margin-right: 56px;
+        }
+
+        .banner{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .banner_img img{
+            width: 329px;
+            height: 259.17px;
+        }
+
+        .banner_text{
+            margin-bottom: 50px;
+        }
+        .banner_text h1{
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 50px;
+        margin-bottom: 30px;
+        
+        }
+
+        .players{
+         
+            grid-template-columns: repeat(1,1fr);
+        
+        }
+    }
